@@ -3,19 +3,19 @@
 <script type=text/javascript>
 	var $param=[],$seo,$url = "https://api.notestore.cn/app/me",$router = window.location.pathname.split("/");
 
-    $param['appid'] =  '/' . $router[1];
+    $param['appid'] =  '/' + $router[1];
 
     if($router[2] && !$router[3] && undefined != $router[3])
     {
-        $url += '&tree_name=' . $router[2];
+        $url += '&tree_name=' + $router[2];
     }
     else if($router[2] && $router[3])
     {
-        $url += '&tree_name=' . $router[2] . '&tree_id=' . $router[3];
+        $url += '&tree_name=' + $router[2] . '&tree_id=' + $router[3];
     }
     else if($router[2]) 
     {
-        $url += '&tree_id=' . $router[2];
+        $url += '&tree_id=' + $router[2];
     }
 
 	$seo = $.ajax({url: $url,async:false,dataType:"json"});
