@@ -2,7 +2,7 @@
 
 <script type=text/javascript>
 	var $param=[],$seo,$param = {},$router = window.location.pathname.split("/");
-	
+
     $param.appid = $router[1];
 
     if($router[2] && !$router[3] && undefined != $router[3])
@@ -20,5 +20,7 @@
     }
 
 	$seo = $.ajax({url: "https://api.notestore.cn/app/me",data: $param,async:false,dataType:"json"});
+
+	console.log($seo);
 	window.rawData={'me':$seo.responseJSON};</script>
 	<script type=text/javascript>window.rawData={};</script><link href="//static.notestore.cn/gitbook/font-awesome.min.css" rel=stylesheet><link href=//static.notestore.cn/css/app.6f15c26ee771385616bbab75c42ad69d.css rel=stylesheet><link href=//static.notestore.cn/css/style_v2.css rel=stylesheet></head><body class="share-wechat"><div id="share-load-page"></div><div id=app></div><script type=text/javascript src=//static.notestore.cn/js/manifest.330d62aee304fcd3c4c0.js></script><script type=text/javascript src=//static.notestore.cn/js/vendor.1b5292be373f0b3ba3b9.js></script><script type=text/javascript src=//static.notestore.cn/js/app.c85617a9c7fa6cb77b9d.min.js></script><style type="text/css"></style><div class="suspension-panel suspension-panel"></div></body></html>
