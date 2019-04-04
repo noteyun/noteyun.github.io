@@ -5,15 +5,15 @@
 
     $param['appid'] =  '/' . $router[1];
 
-    if(!$router[2] && $router[3] && undefined != $router[3])
+    if($router[2] && !$router[3] && undefined != $router[3])
     {
         $url .= '&tree_name=' . $router[2];
     }
-    else if(!$router[2] && !$router[3])
+    else if($router[2] && $router[3])
     {
         $url .= '&tree_name=' . $router[2] . '&tree_id=' . $router[3];
     }
-    else if(!$router[2]) 
+    else if($router[2]) 
     {
         $url .= '&tree_id=' . $router[2];
     }
